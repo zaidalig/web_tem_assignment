@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Web Games</title>
+
+    <!-- Link to CSS Files -->
+    <link rel="stylesheet" href="css/styles_rps.css">
+    <link rel="stylesheet" href="css/styles_gtn.css">
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Link to JavaScript Files -->
+    <script src="js/script_rps.js" defer></script>
+    <script src="js/script_gtn.js" defer></script>
+</head>
+
+<body>
+    <!-- Rock, Paper, Scissors Game Section -->
+    <section id="rock-paper-scissors">
+        <div class="game-container">
+            <h1>Rock, Paper, Scissors</h1>
+            <div class="choices">
+                <button class="choice" data-choice="rock">Rock</button>
+                <button class="choice" data-choice="paper">Paper</button>
+                <button class="choice" data-choice="scissors">Scissors</button>
+            </div>
+            <div class="result">
+                <p id="rps-result-text">Make your choice!</p>
+            </div>
+            <div class="animations">
+                <img id="rps-player-choice" src="" alt="Player Choice">
+                <img id="rps-computer-choice" src="" alt="Computer Choice">
+            </div>
+        </div>
+    </section>
+
+    <!-- Guess the Number Game Section -->
+    <section id="guess-the-number">
+        <div class="game-container">
+            <h1>Guess the Number</h1>
+            <p>I'm thinking of a number between 1 and 100.</p>
+            <input type="number" id="gtn-guess-input" placeholder="Enter your guess" min="1" max="100">
+            <button id="gtn-submit-guess">Guess</button>
+            <button id="gtn-restart-game">Restart</button>
+            <div class="feedback">
+                <p id="gtn-feedback-text">Make a guess!</p>
+                <p id="gtn-attempts-remaining">Attempts Remaining: 10</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

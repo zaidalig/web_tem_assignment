@@ -1,0 +1,82 @@
+/* Guess the Number - styles_gtn.css */
+
+/* General Styling */
+#guess-the-number .game-container {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+#guess-the-number h1 {
+    color: #333333;
+}
+
+#guess-the-number p {
+    color: #555555;
+}
+
+#guess-the-number input[type="number"] {
+    padding: 10px;
+    width: 60%;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+}
+
+#guess-the-number button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#guess-the-number button:hover {
+    background-color: #45a049;
+}
+
+#guess-the-number .feedback {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#guess-the-number #gtn-feedback-text {
+    color: #ff5722;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#guess-the-number #gtn-feedback-text.visible {
+    opacity: 1;
+}
+
+#guess-the-number #gtn-attempts-remaining {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #guess-the-number .game-container {
+        width: 95%;
+    }
+
+    #guess-the-number input[type="number"] {
+        width: 80%;
+    }
+
+    #guess-the-number button {
+        width: 80%;
+        margin: 10px 0;
+    }
+}

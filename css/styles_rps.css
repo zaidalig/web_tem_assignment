@@ -1,0 +1,108 @@
+/* Rock, Paper, Scissors - styles_rps.css */
+
+/* General Styling */
+#rock-paper-scissors .game-container {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+#rock-paper-scissors h1 {
+    color: #333333;
+}
+
+#rock-paper-scissors .choices {
+    margin: 20px 0;
+}
+
+#rock-paper-scissors .choice {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#rock-paper-scissors .choice:hover {
+    background-color: #45a049;
+}
+
+#rock-paper-scissors .result {
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555555;
+}
+
+#rock-paper-scissors .animations img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: none;
+    transition: transform 0.3s;
+}
+
+#rock-paper-scissors .animations img.active {
+    display: inline-block;
+    transform: scale(1.2);
+}
+
+/* Highlight effect for selected button */
+#rock-paper-scissors .choice.selected {
+    background-color: #FFD700;
+    /* Gold color for highlight */
+    color: #000;
+    /* Change text color to black for contrast */
+    transform: scale(1.1);
+    /* Slightly enlarge the button */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Add a shadow effect */
+    transition: all 0.3s ease;
+    /* Smooth transition for the animation */
+}
+
+/* Optional: Define a keyframe animation for a bounce effect */
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Apply the bounce animation when the selected class is added */
+#rock-paper-scissors .choice.selected.animate-bounce {
+    animation: bounce 0.5s;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #rock-paper-scissors .game-container {
+        width: 95%;
+    }
+
+    #rock-paper-scissors .choice {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #rock-paper-scissors .animations img {
+        width: 80px;
+        height: 80px;
+    }
+}
